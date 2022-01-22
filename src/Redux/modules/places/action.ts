@@ -104,7 +104,7 @@ export const selectCity = (item: object) => async (dispatch: any) => {
         daily: weatherData.daily
       }
 
-      const refactor = await setPlaces(location, places)
+      const refactor = await setPlaces(location, place)
       await dispatch({ type: GET_PLACES, payload: refactor })
 
     }
