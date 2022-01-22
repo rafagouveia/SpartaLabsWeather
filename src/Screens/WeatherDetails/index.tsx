@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { FlatList, ScrollView, View, Image } from "react-native"
-import { Appbar, Button, Portal, Dialog, Paragraph, Surface, Text, } from "react-native-paper"
+import { Appbar, Button, Portal, Dialog, Paragraph, Surface, Text } from "react-native-paper"
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useDispatch } from "react-redux"
 import { apiOpenWeather } from "../../../services/api"

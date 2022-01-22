@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { ActivityIndicator, Appbar, Modal, Portal, ProgressBar } from "react-native-paper"
+import { ActivityIndicator, Appbar, Modal, Portal } from "react-native-paper"
 import { FlatList, TextInput, TouchableOpacity } from "react-native"
 import { MView, Text } from "../../Components"
 import { searchCities, selectCity } from "../../Redux/modules/places/action"

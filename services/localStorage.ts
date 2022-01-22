@@ -1,7 +1,4 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { SET_PLACES } from "../src/Redux/modules/places/types";
-import store from "../src/Redux/store";
-
 
 export const getGrauType = async () => {
   try {
