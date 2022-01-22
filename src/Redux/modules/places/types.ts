@@ -1,0 +1,4 @@
+export const REMOVE_PLACES = "REMOVE_PLACES"
+export const SET_PLACES = "SET_PLACES"
+export const GET_PLACES = "GET_PLACES"
+export const LOADING_PLACES = "LOADING_PLACES"

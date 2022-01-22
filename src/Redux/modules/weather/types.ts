@@ -1,0 +1,4 @@
+export const GET_WEATHER = "GET_WEATHER"
+export const SET_WEATHER = "SET_WEATHER"
+export const LOADING_WEATHER = "LOADING_WEATHER"
+export const REMOVE_WEATHER = "REMOVE__WEATHER"
