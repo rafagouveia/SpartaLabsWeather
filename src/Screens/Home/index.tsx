@@ -30,9 +30,10 @@ export default function Home(props: any) {
   useEffect(() => {
 
     let timer = setInterval(() => {
-      // console.warn("Olá")
-      // dispatch(updateWeatherForPlace())
-    }, 1000 * 5)
+
+      dispatch(updateWeatherForPlace())
+      
+    }, 1000 * 30)
 
     return () => clearInterval(timer)
   }, [])
