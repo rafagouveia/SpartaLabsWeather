@@ -33,21 +33,23 @@ export const getPlaces = async () => {
 
 export const setPlaces = async (location: object, locations: any[]) => {
   try {
-    let array = []
+    let array = locations || []
 
-    if (locations) {
+    if (locations.length) {
       if (!locations.some(el => el.place_id === location.place_id)) {
-        array.push(...locations, location)
+        array.push(location)
         await AsyncStorage.setItem("places", JSON.stringify(array))
+        console.warn("Achei")
         return array
       }
 
     } else {
       array.push(location)
       await AsyncStorage.setItem("places", JSON.stringify(array))
+      console.warn("Não achei")
       return array
     }
-
+    return array
 
   } catch (e) {
     console.error(e)

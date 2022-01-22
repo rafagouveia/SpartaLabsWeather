@@ -83,6 +83,7 @@ export const selectCity = (item: object) => async (dispatch: any) => {
   try {
     dispatch({ type: LOADING_WEATHER, loading: true })
     const place: [] = store.getState().placesState.payload
+
     const { place_id } = item
 
     const { data } = await apiGoogle.get(`/place/details/json`, {
@@ -105,11 +106,12 @@ export const selectCity = (item: object) => async (dispatch: any) => {
       }
 
       const refactor = await setPlaces(location, place)
+
       await dispatch({ type: GET_PLACES, payload: refactor })
 
     }
   } catch (error) {
-
+    console.warn(error)
     throw new Error("Erro ao selecionar a cidade da lista");
 
   } finally {

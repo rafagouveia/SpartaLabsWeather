@@ -70,7 +70,7 @@ export default function Home(props: any) {
   }
 
   return (
-    <MView flex={1}>
+    <MView >
       <StatusBar backgroundColor={theme.colors.primary} />
       <Appbar.Header>
         <Appbar.Action />
@@ -83,14 +83,14 @@ export default function Home(props: any) {
           <Switch color={theme.colors.primary} value={grauType} onValueChange={__handleSetGrauType} />
         </MView>
       </MView>
-      <MView flex={1}>
+      <MView>
         <FlatList
           data={sortCities(payload)}
           extraData={sortCities(payload)}
           contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 40 }}
           ListEmptyComponent={EmptyResult}
           renderItem={({ item }) => <CardWeather item={item} grauType={grauType} />}
-          keyExtractor={(item, index) => index.toString()}
+          keyExtractor={(item, index) => item.name}
         />
       </MView>
     </MView>

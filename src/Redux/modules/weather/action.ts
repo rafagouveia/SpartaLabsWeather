@@ -6,7 +6,8 @@ export const getWeather = async ({ lat, lng }: { lat: number, lng: number }) => 
             lat: lat,
             lon: lng,
             units: "metric",
-            lang: "pt_br"
+            lang: "pt_br",
+            exclude: "minutely,hourly,alerts"
         }
     })
     return result.data

@@ -26,13 +26,13 @@ export default function CardWeather(props: any) {
     return fomated
   }
   return (
-    <TouchableOpacity style={{ overflow: "hidden", borderRadius: 15, marginVertical: 8 }}
+    <TouchableOpacity style={{ flex: 1, overflow: "hidden", borderRadius: 15, marginVertical: 8 }}
       onPress={() => navigation.navigate("WeatherDetails", {
         data: item,
         grauType: grauType
       })}
     >
-      <MView flex={1} padding={15} backgroundColor="#fff">
+      <MView padding={15} backgroundColor="#fff">
         <MView flexDirection="column">
           <MView flex={1} flexDirection="row" alignItems="center" pb={32} justifyContent="space-between">
             <MView flex={1} paddingRight={10}>
