@@ -28,11 +28,11 @@ export default function Home(props: any) {
   }, [])
 
   useEffect(() => {
-
+    dispatch(updateWeatherForPlace())
     let timer = setInterval(() => {
 
       dispatch(updateWeatherForPlace())
-      
+
     }, 1000 * 30)
 
     return () => clearInterval(timer)
@@ -42,7 +42,7 @@ export default function Home(props: any) {
     const sorties = data.sort((a, b) => a.favorite ? -1 : 1 && b.favorite ? 1 : -1)
     return sorties
   }
-  
+
   const __handleSetGrauType = () => {
     setGrauTypeState(state => !state)
     setGrauType(!grauType)
